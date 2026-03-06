@@ -1,0 +1,21 @@
+# Banco de Dados
+pymysql>=1.1.0
+
+# Requisições HTTP (API Clients)
+requests>=2.31.0
+
+# Processamento de Imagem e Arrays
+Pillow>=10.0.0
+numpy>=1.26.0
+
+# Processamento de PDF
+pymupdf>=1.23.0
+pdfplumber>=0.10.0
+
+# OCR e Leitura de Códigos de Barras
+easyocr>=1.7.1
+zxing-cpp>=2.2.0
+
+# Dependências indiretas importantes (Geralmente instaladas automaticamente, mas bom garantir)
+torch>=2.0.0
+torchvision>=0.15.0

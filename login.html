@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sistema de Gestão - Login</title>
+
+	<!-- Global stylesheets -->
+	<link href="/assets/inter.css" rel="stylesheet" type="text/css">
+	<link href="/assets/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/all.min.css" id="stylesheet" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="/assets/demo_configurator.js"></script>
+	<script src="/assets/bootstrap.bundle.min.js"></script>
+	<script src="/assets/login.js"></script>
+	<!-- /core JS files -->
+	 
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+	<link rel="manifest" href="/assets/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!-- jQuery -->
+	<script src="/assets/jq36.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Page content -->
+	<div class="page-content login-cover">
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Inner content -->
+			<div class="content-inner">
+
+				<!-- Content area -->
+				<div class="content d-flex justify-content-center align-items-center">
+
+					<!-- Login form -->
+					<form id="loginForm" class="login-form wmin-sm-400">
+						<div class="card mb-0">
+							<ul class="nav nav-tabs nav-tabs-underline nav-justified bg-light rounded-top mb-0">
+								<li class="nav-item">
+									<a href="#login-tab1" class="nav-link active" data-bs-toggle="tab">
+										<h6 class="my-1">Entrar</h6>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#login-tab2" class="nav-link" data-bs-toggle="tab">
+										<h6 class="my-1">Cadastrar</h6>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#login-tab3" class="nav-link" data-bs-toggle="tab">
+										<h6 class="my-1">Recuperar</h6>
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content card-body">
+								<!-- Login Tab -->
+								<div class="tab-pane fade show active" id="login-tab1">
+									<div class="text-center mb-3">
+										<div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
+											<img src="assets/logo_icon.png" class="h-48px" alt="">
+										</div>
+										<h5 class="mb-0">Acesse sua conta</h5>
+										<span class="d-block text-muted">Digite suas credenciais abaixo</span>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Usuário, Email ou Celular</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="text" class="form-control" id="login-username" placeholder="usuario, email ou celular" required>
+											<div class="invalid-feedback">Digite seu usuário</div>
+											<div class="form-control-feedback-icon">
+												<i class="ph-user-circle text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Senha</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="password" class="form-control" id="login-password" placeholder="•••••••••••" required>
+											<div class="invalid-feedback">Digite sua senha</div>
+											<div class="form-control-feedback-icon">
+												<i class="ph-lock text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-center mb-3">
+										<label class="form-check">
+											<input type="checkbox" name="remember" class="form-check-input" checked>
+											<span class="form-check-label">Lembrar</span>
+										</label>
+
+										<a href="#" class="ms-auto" onclick="showPasswordRecovery()">Esqueceu a senha?</a>
+									</div>
+
+									<div class="mb-3">
+										<button type="button" id="login-button" class="btn btn-primary w-100">Entrar</button>
+									</div>
+
+									<div class="text-center text-muted content-divider mb-3">
+										<span class="px-2">Não tem uma conta?</span>
+									</div>
+
+									<div class="mb-3">
+										<a href="#" class="btn btn-light w-100" onclick="showRegister()">Cadastre-se</a>
+									</div>
+
+									<div class="text-center">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#maProjetosModal">Entenda sobre o MA Projetos</a>
+									</div>
+									<hr>
+									<span class="form-text text-center text-muted">Ao continuar, você confirma que leu nossos <a href="#">Termos e Condições</a> e <a href="#">Política de Cookies</a></span>
+								</div>
+
+								<!-- Register Tab -->
+								<div class="tab-pane fade" id="login-tab2">
+									<div class="text-center mb-3">
+										<div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
+											<img src="assets/logo_icon.png" class="h-48px" alt="">
+										</div>
+										<h5 class="mb-0">Criar conta</h5>
+										<span class="d-block text-muted">Todos os campos são obrigatórios</span>
+									</div>
+
+									<div class="text-center text-muted content-divider mb-3">
+										<span class="px-2">Suas credenciais</span>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Usuário</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="text" class="form-control" id="register-username" placeholder="SeuUsuario" maxlength="15" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-user-circle text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Senha</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="password" class="form-control" id="register-password" placeholder="•••••••••••" maxlength="15" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-lock text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Nome</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="text" class="form-control" id="register-name" placeholder="Seu nome" maxlength="15" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-user text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Sobrenome</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="text" class="form-control" id="register-surname" placeholder="Seu sobrenome" maxlength="15" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-user text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Empresa</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="text" class="form-control" id="register-company" placeholder="Sua empresa" maxlength="15" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-buildings text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Telefone</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="tel" class="form-control" id="register-phone" placeholder="(00) 00000-0000" maxlength="20">
+											<div class="form-control-feedback-icon">
+												<i class="ph-phone text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Email</label>
+										<div class="form-control-feedback form-control-feedback-start">
+											<input type="email" class="form-control" id="register-email" placeholder="seu@email.com" maxlength="90" required>
+											<div class="form-control-feedback-icon">
+												<i class="ph-at text-muted"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="text-center text-muted content-divider mb-3">
+										<span class="px-2">Termos</span>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-check mb-2">
+											<input type="checkbox" id="register-tos" class="form-check-input">
+											<span class="form-check-label">Aceito os <a href="#" data-bs-toggle="modal" data-bs-target="#tosModal"> Termos de Serviço</a></span>
+										</label>
+
+										<label class="form-check">
+											<input type="checkbox" id="register-intellectual" class="form-check-input">
+											<span class="form-check-label">Aceito os termos de <a href="#" data-bs-toggle="modal" data-bs-target="#intellectualModal"> Propriedade Intelectual</a></span>
+										</label>
+									</div>
+
+									<button type="button" id="register-button" class="btn btn-primary w-100">Cadastrar</button>
+								</div>
+
+								<!-- Password Recovery Tab -->
+								<div class="tab-pane fade" id="login-tab3">
+									<div class="text-center mb-3">
+										<div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
+											<img src="assets/logo_icon.png" class="h-48px" alt="">
+										</div>
+										<h5 class="mb-0">Recuperação de senha</h5>
+										<span class="d-block text-muted">Siga os passos abaixo</span>
+									</div>
+
+									<!-- Step 1: Email submission -->
+									<div id="recover-step1">
+										<div class="mb-3">
+											<label class="form-label">Seu email</label>
+											<div class="form-control-feedback form-control-feedback-start">
+												<input type="email" class="form-control" id="recover-email" placeholder="seu@email.com" required>
+												<div class="form-control-feedback-icon">
+													<i class="ph-at text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="mb-3">
+											<button type="button" id="recover-email-button" class="btn btn-primary w-100">Enviar código</button>
+										</div>
+									</div>
+
+									<!-- Step 2: Verification code -->
+									<div id="recover-step2" style="display: none;">
+										<div class="mb-3">
+											<label class="form-label">Código de verificação</label>
+											<div class="form-control-feedback form-control-feedback-start">
+												<input type="text" class="form-control" id="recover-code" placeholder="Digite o código enviado por email" required>
+												<div class="form-control-feedback-icon">
+													<i class="ph-key text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="mb-3">
+											<button type="button" id="recover-verify-button" class="btn btn-primary w-100">Verificar</button>
+										</div>
+									</div>
+
+									<!-- Step 3: New password -->
+									<div id="recover-step3" style="display: none;">
+										<div class="mb-3">
+											<label class="form-label">Nova senha</label>
+											<div class="form-control-feedback form-control-feedback-start">
+												<input type="password" class="form-control" id="recover-password" placeholder="Digite sua nova senha" required>
+												<div class="form-control-feedback-icon">
+													<i class="ph-lock text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="mb-3">
+											<label class="form-label">Confirme a nova senha</label>
+											<div class="form-control-feedback form-control-feedback-start">
+												<input type="password" class="form-control" id="recover-password-confirm" placeholder="Confirme sua nova senha" required>
+												<div class="form-control-feedback-icon">
+													<i class="ph-lock text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="mb-3">
+											<button type="button" id="recover-password-button" class="btn btn-primary w-100">Salvar nova senha</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<!-- /login form -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /inner content -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+    
+    <!-- MA Projetos Modal -->
+	<div class="modal fade" id="maProjetosModal" tabindex="-1" aria-labelledby="maProjetosModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="maProjetosModalLabel">Sobre o MA Projetos</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>O <strong>MA Projetos</strong> é uma suíte de sistemas de gestão integrada, desenvolvida para otimizar e automatizar processos complexos em diversas áreas. Abaixo estão os módulos atualmente em produção:</p>
+                    <hr>
+					<h4>Orçado x Realizado</h4>
+					<p>Compara os custos planejados (orçamento) com os custos reais incorridos em projetos, oferecendo uma visão clara da saúde financeira e do desempenho de cada obra.</p>
+
+                    <h4>Zeus (Cotações)</h4>
+					<p>Um portal de cotações robusto que conecta compradores a uma rede de fornecedores, automatizando o processo de solicitação, recebimento e comparação de propostas comerciais.</p>
+
+                    <h4>Governança de NF-e</h4>
+					<p>Módulo para gerenciamento e monitoramento de notas fiscais eletrônicas, garantindo conformidade fiscal e agilizando o processo de lançamento e pagamento.</p>
+
+                    <h4>Estoque e Movimentação</h4>
+					<p>Controla a entrada, saída, transferência e correção de insumos no estoque, fornecendo dados precisos sobre a disponibilidade de materiais em diferentes obras e no estoque central.</p>
+
+                    <h4>Gaia (Processamento de Documentos)</h4>
+					<p>Utiliza inteligência artificial para ler, interpretar e extrair dados de documentos complexos, como boletos e títulos, automatizando a entrada de dados financeiros.</p>
+
+                    <h4>SGQ (Sistema de Gestão da Qualidade)</h4>
+					<p>Gerencia certificados de qualidade de produtos e fornecedores, garantindo que todos os insumos utilizados nos projetos atendam às normas exigidas.</p>
+
+                    <h4>Status de Solicitações</h4>
+					<p>Oferece um painel completo para rastrear o ciclo de vida de uma solicitação de compra, desde a sua criação até a entrega final do material.</p>
+
+                    <h4>Previsão Financeira</h4>
+					<p>Projeta os pagamentos futuros com base em notas fiscais e condições de pagamento, oferecendo uma visão clara do fluxo de caixa e das obrigações financeiras.</p>
+
+                    <h4>BIs de Suprimentos</h4>
+					<p>Painel de Business Intelligence focado na área de suprimentos, apresentando rankings de fornecedores, volume de compras por obra e outros indicadores de performance.</p>
+
+                    <h4>Buscas Unificadas</h4>
+					<p>Uma ferramenta de busca poderosa que permite encontrar informações de forma centralizada em diversas bases de dados do sistema, como notas fiscais, produtos e fornecedores.</p>
+
+                    <h4>OLX Oportunidades</h4>
+					<p>Um minerador de dados e ferramenta de análise de mercado que monitora a plataforma OLX para analisar tendências de preços.</p>
+
+                    <h4>LinkedIn</h4>
+					<p>Um módulo de uso pessoal para gerenciamento, automação e extração de dados na plataforma LinkedIn.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Termos de Serviço Modal -->
+	<div class="modal fade" id="tosModal" tabindex="-1" aria-labelledby="tosModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="tosModalLabel">Termos de Serviço</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+                    <p><strong>1. Aceitação dos Termos:</strong> Ao acessar e utilizar a plataforma MA Projetos ("Software"), você ("Usuário") concorda em cumprir e estar vinculado a estes Termos de Serviço.</p>
+                    <p><strong>2. Uso do Serviço:</strong> O Software é fornecido "como está" e "conforme disponível". O uso do serviço é por sua conta e risco. Você é responsável por todas as atividades que ocorrem em sua conta e pela segurança de suas credenciais.</p>
+                    <p><strong>3. Limitação de Responsabilidade:</strong> Em nenhuma circunstância o desenvolvedor do MA Projetos será responsável por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou exemplares, incluindo, mas não se limitando a, danos por perda de lucros, dados ou outras perdas intangíveis resultantes do uso ou da incapacidade de usar o serviço.</p>
+                    <p><strong>4. Modificações no Serviço:</strong> Reservamo-nos o direito de modificar ou descontinuar, temporária ou permanentemente, o Serviço (ou qualquer parte dele) com ou sem aviso prévio.</p>
+                    <p><strong>5. Jurisdição:</strong> Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem consideração com conflitos de disposições legais.</p>
+                </div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Propriedade Intelectual Modal -->
+	<div class="modal fade" id="intellectualModal" tabindex="-1" aria-labelledby="intellectualModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="intellectualModalLabel">Declaração de Propriedade Intelectual</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+                    <p><strong>1. Titularidade:</strong> Fica expressamente declarado que todo o código-fonte, arquitetura, design, algoritmos, fluxos de trabalho, documentação e todos os demais componentes que constituem a plataforma MA Projetos ("Software") são de propriedade intelectual única e exclusiva de seu desenvolvedor, Michael Anderson.</p>
+                    <p><strong>2. Ausência de Transferência de Direitos:</strong> O uso deste Software por qualquer usuário, seja pessoa física ou jurídica, não confere, sob nenhuma hipótese, licença, cessão, transferência ou aquisição de quaisquer direitos de propriedade sobre o Software. O acesso é concedido unicamente na forma de uma licença de uso, revogável e não exclusiva.</p>
+                    <p><strong>3. Esclarecimento sobre Vínculo Empregatício:</strong> Fica explicitamente registrado que o desenvolvimento e a utilização do Software, inclusive em ambiente corporativo na <strong>Yutá Incorporadora</strong>, onde o desenvolvedor atua como Coordenador de Suprimentos, não caracterizam "obra por encomenda" (work for hire) ou qualquer vínculo de propriedade entre a Yutá Incorporadora e o Software. A plataforma é uma ferramenta de propriedade do desenvolvedor, utilizada para otimizar suas funções, e seu desenvolvimento é independente de suas obrigações contratuais como funcionário.</p>
+                    <p><strong>4. Clientes e Parceiros:</strong> A utilização do Software por funcionários ou representantes de outras empresas, incluindo, mas não se limitando a, <strong>Eletrobrás Amazonas GT</strong>, <strong>Kraft Heinz</strong> e <strong>Sinagro</strong>, também se dá sob uma licença de uso e não lhes confere quaisquer direitos de propriedade sobre o Software.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Alert Modal -->
+	<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="alertModalLabel">Alerta</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id="alertModalContent">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+	</script>
+</body>
+</html>

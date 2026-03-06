@@ -1,0 +1,96 @@
+# =============================================================================
+# MA Projetos — .gitignore
+# =============================================================================
+
+# ─── CREDENCIAIS E CONFIGURAÇÕES SENSÍVEIS ───────────────────────────────────
+conn.php
+config.php
+config.local.php
+.env
+.env.local
+.env.*.local
+secrets.php
+credentials.php
+
+# ─── BANCO DE DADOS ──────────────────────────────────────────────────────────
+*.sql
+*.sqlite
+*.db
+database/dumps/
+database/backups/
+
+# ─── LOGS E DEBUG ────────────────────────────────────────────────────────────
+*.log
+logs/
+error_log
+php_errors.log
+debug.log
+
+# ─── UPLOADS E ARQUIVOS GERADOS ──────────────────────────────────────────────
+uploads/
+temp/
+tmp/
+cache/
+storage/
+assets/pics/
+!assets/pics/default.jpg
+
+# ─── PYTHON ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+.env/
+
+# ─── UTILITÁRIOS DE EXPORTAÇÃO ───────────────────────────────────────────────
+CONTEXTO.txt
+extractor.py
+*.export.txt
+
+# ─── NODE / NPM (se usar ferramentas de build) ────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ─── EDITORES E IDEs ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── SISTEMA OPERACIONAL ─────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ─── COMPOSER (PHP) ──────────────────────────────────────────────────────────
+vendor/
+composer.phar
+
+# ─── ARQUIVOS TEMPORÁRIOS DO WINDOWS ─────────────────────────────────────────
+*.tmp
+*.temp
+~$*
+
+# ─── ARQUIVOS DE BACKUP ──────────────────────────────────────────────────────
+*.bak
+*.backup
+*.orig
